@@ -1,0 +1,8 @@
+{
+  "name": "Freelance Dev Portfolio",
+  "description": "A modern, high-performance portfolio website for a freelance developer, featuring project showcases and technical skills.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
