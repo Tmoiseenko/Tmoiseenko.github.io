@@ -1,0 +1,55 @@
+{
+  "localeCode": "ru-RU",
+  "pageTitle": "Тимур Моисеенко — Web разработчик",
+  "dataSourceLabel": "Источник данных",
+  "nav": {
+    "about": "Обо мне",
+    "projects": "Проекты",
+    "skills": "Навыки",
+    "experience": "Опыт"
+  },
+  "language": {
+    "ru": "RU",
+    "en": "EN",
+    "uz": "UZ"
+  },
+  "hero": {
+    "availability": "Открыт для новых проектов",
+    "contact": "Написать мне"
+  },
+  "about": {
+    "title": "Философия",
+    "accent": "Технический бэкграунд",
+    "endTransmission": "Конец передачи",
+    "competenciesTitle": "Ключевые компетенции"
+  },
+  "projects": {
+    "title": "Избранные",
+    "accent": "Работы"
+  },
+  "skills": {
+    "title": "Технические",
+    "accent": "Навыки"
+  },
+  "experience": {
+    "title": "Профессиональный",
+    "accent": "Опыт",
+    "present": "по настоящее время",
+    "duration": {
+      "year": {
+        "one": "год",
+        "few": "года",
+        "many": "лет"
+      },
+      "month": {
+        "one": "месяц",
+        "few": "месяца",
+        "many": "месяцев"
+      }
+    }
+  },
+  "footer": {
+    "email": "Почта",
+    "signature": "Минималистичная разработка // Структурная целостность"
+  }
+}

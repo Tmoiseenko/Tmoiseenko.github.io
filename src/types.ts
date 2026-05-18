@@ -10,8 +10,15 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  category: "frontend" | "backend" | "tools" | "other";
+  category: "frontend" | "backend" | "tools" | "cms" | "devops" | "other";
   level?: number; // 1-100
+}
+
+export interface PluralForms {
+  one: string;
+  few?: string;
+  many?: string;
+  other?: string;
 }
 
 export interface Competency {
@@ -47,3 +54,52 @@ export interface PortfolioData {
   projects: Project[];
   experience: Experience[];
 }
+
+export interface UiDictionary {
+  localeCode: string;
+  pageTitle: string;
+  dataSourceLabel: string;
+  nav: {
+    about: string;
+    projects: string;
+    skills: string;
+    experience: string;
+  };
+  language: {
+    ru: string;
+    en: string;
+    uz: string;
+  };
+  hero: {
+    availability: string;
+    contact: string;
+  };
+  about: {
+    title: string;
+    accent: string;
+    endTransmission: string;
+    competenciesTitle: string;
+  };
+  projects: {
+    title: string;
+    accent: string;
+  };
+  skills: {
+    title: string;
+    accent: string;
+  };
+  experience: {
+    title: string;
+    accent: string;
+    present: string;
+    duration: {
+      year: PluralForms;
+      month: PluralForms;
+    };
+  };
+  footer: {
+    email: string;
+    signature: string;
+  };
+}
+

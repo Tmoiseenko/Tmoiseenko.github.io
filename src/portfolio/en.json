@@ -1,0 +1,164 @@
+{
+  "name": "Timur Moiseenko",
+  "role": "Web Developer",
+  "bio": "Developer and systems administrator with 10+ years of experience. I focus not just on writing code, but on building solutions that deliver results. I have worked both in small teams and on large-scale projects. Right now I am actively growing in DevOps, which helps me build reliable applications and keep them stable and scalable in production.",
+  "about": "I have hands-on experience with PHP 5.6/7/8, Python 3, and JavaScript. I built solutions for WordPress and WooCommerce, including custom themes, plugin development, and non-standard business logic. I also worked with 1C-Bitrix on custom components, templates, and Symfony-based extensions. My stack includes OctoberCMS, Laravel 6+, FastAPI, Symfony 5, and CodeIgniter 3. I build user interfaces with Vue 2/3 and have some experience with Alpine.js. I design REST and GraphQL APIs, use Git and Docker in daily development, and work confidently with MySQL, PostgreSQL, and Oracle. I have experience both in small teams of up to 5 people and in larger teams of up to 50. I also manage Windows and Linux servers, monitor infrastructure with Zabbix, Prometheus, and Grafana, and have worked with Yandex Cloud, Google Cloud, and Timeweb Cloud. I read technical documentation freely in English and use it in day-to-day work. I have also published several plugins for the open-source Moonshine admin panel and apply DevOps practices in the projects I lead.",
+  "location": "Uzbekistan",
+  "email": "angrav-6@yandex.ru",
+  "avatar": "/images/me.png",
+  "socials": {
+    "github": "https://github.com/Tmoiseenko",
+    "telegram": "https://t.me/tmoiseenko",
+    "phone": "+998974554533"
+  },
+  "skills": [
+    { "name": "PHP", "category": "backend" },
+    { "name": "Laravel", "category": "backend" },
+    { "name": "Symfony", "category": "backend" },
+    { "name": "Python", "category": "tools" },
+    { "name": "FastAPI", "category": "backend" },
+    { "name": "WordPress / WooCommerce", "category": "cms" },
+    { "name": "1C-Bitrix", "category": "cms" },
+    { "name": "OctoberCMS", "category": "cms" },
+    { "name": "JS / jQuery", "category": "frontend" },
+    { "name": "Vue 2 / Vue 3", "category": "frontend" },
+    { "name": "MySQL", "category": "backend" },
+    { "name": "PostgreSQL", "category": "backend" },
+    { "name": "Docker", "category": "devops" },
+    { "name": "GitHub", "category": "devops" },
+    { "name": "GitLab", "category": "devops" },
+    { "name": "Yandex Cloud", "category": "devops" },
+    { "name": "Google Cloud", "category": "devops" },
+    { "name": "DevOps", "category": "devops" },
+    { "name": "Monitoring: Zabbix / Prometheus / Grafana", "category": "devops" }
+  ],
+  "competencies": [
+    {
+      "label": "Reliable backend development",
+      "description": "Scalable Laravel and Symfony applications, API integrations, architecture design, and maintainable server-side code."
+    },
+    {
+      "label": "CMS architecture",
+      "description": "Advanced WordPress, WooCommerce, 1C-Bitrix, and OctoberCMS solutions: themes, plugins, custom modules, and business logic."
+    },
+    {
+      "label": "APIs and integrations",
+      "description": "REST and GraphQL APIs for web and mobile products, plus integrations with CRMs, payment gateways, and external services."
+    },
+    {
+      "label": "Frontend logic",
+      "description": "Interactive Vue 2/3 interfaces, real-time features, admin panels, and frontend integration with backend services."
+    },
+    {
+      "label": "Infrastructure and DevOps",
+      "description": "Linux/Windows server administration, Docker, cloud platforms, monitoring, and production stability."
+    },
+    {
+      "label": "Databases",
+      "description": "Schema design, query optimization, and production work with MySQL, PostgreSQL, and Oracle."
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Aglona.ru",
+      "description": "Custom WordPress + WooCommerce theme development. Implemented warehouse support, product stock mapping per warehouse, and a custom favorites system.",
+      "tags": ["WordPress", "PHP", "WooCommerce"],
+      "link": "https://www.aglona.ru/",
+      "github": "https://github.com/Tmoiseenko/Aglona_WP_Theme"
+    },
+    {
+      "id": "2",
+      "title": "Kotly.uz",
+      "description": "Catalog website for a boiler equipment manufacturer. Built a custom WordPress theme with multiple custom post types and non-standard content blocks.",
+      "tags": ["WordPress", "PHP", "Catalog"],
+      "link": "https://kotly.uz/"
+    },
+    {
+      "id": "3",
+      "title": "asakabank.uz",
+      "description": "Built the administrative part of the website, including a static-page editing tool and online payment integration with a banking API.",
+      "tags": ["Laravel", "PHP", "Banking API"],
+      "link": "https://asakabank.uz/physical-persons/home"
+    },
+    {
+      "id": "4",
+      "title": "Web Conference Platform",
+      "description": "A full webinar platform with registration, live chat, streaming, analytics, and mailing features.",
+      "tags": ["Laravel", "Vue 3", "WebSockets"],
+      "github": "https://github.com/Tmoiseenko/webconf_platform"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Built an API for processing feedback form data with integrations into 1C-Bitrix and notification systems.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "6",
+      "title": "Laravel Store",
+      "description": "Marketplace with multi-vendor support, flexible discount logic, and JSON/YML import flows.",
+      "tags": ["Laravel", "PHP", "Docker"],
+      "github": "https://github.com/Tmoiseenko/Laravel_shop"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Freelance",
+      "role": "Developer",
+      "from": "2018-02",
+      "to": "",
+      "description": "Private practice: Laravel application development, OctoberCMS plugins and custom functionality, GraphQL and REST APIs, YooKassa integrations, car marketplace portal, book portal, mobile dating app API improvements, Avito pickup-point CRM, and admin panels built with Backpack, Orchid, and Moonshine. Also built FastAPI services, Vue 2/3 interfaces, application architecture, database design, and DevOps workflows."
+    },
+    {
+      "company": "UNIVERSAL MOBILE SYSTEM",
+      "role": "Lead Monitoring Specialist",
+      "from": "2016-01",
+      "to": "",
+      "description": "Monitored company IT infrastructure, billing systems, and business processes. Administered Zabbix, Nagios, Cacti, and Icinga2. Added systems and services to monitoring, built custom scripts and plugins, coordinated incident response, and developed the reporting system for the monitoring team."
+    },
+    {
+      "company": "Zebra Corporate Digital",
+      "role": "Backend Developer",
+      "from": "2022-02",
+      "to": "2022-06",
+      "description": "Developed new features for websites using PHP 7, 1C-Bitrix, and Symfony. Worked in Agile / Scrum, estimated tasks, and performed code reviews."
+    },
+    {
+      "company": "Novikova Agency",
+      "role": "PHP Developer",
+      "from": "2021-05",
+      "to": "2022-05",
+      "description": "Maintained and administered an online events platform. Managed servers in Yandex Cloud and supported a Laravel + Vue application."
+    },
+    {
+      "company": "Blueglass",
+      "role": "WordPress Developer",
+      "from": "2021-05",
+      "to": "2022-03",
+      "description": "Integrated frontend markup into WordPress and built custom solutions for websites and e-commerce systems on top of the platform."
+    },
+    {
+      "company": "ALEX INFORMATION TECHNOLOGY",
+      "role": "PHP Developer",
+      "from": "2020-04",
+      "to": "2020-12",
+      "description": "Integrated frontend markup into WordPress, implemented custom solutions for websites and e-commerce systems, worked with CodeIgniter 3 and Laravel, and integrated payment and CRM APIs."
+    },
+    {
+      "company": "EXPERA INFORM ENGENERING",
+      "role": "System Administrator",
+      "from": "2015-05",
+      "to": "2015-12",
+      "description": "Administered network and server architecture, virtualization systems, and a Panasonic mini-PBX. Troubleshot issues, supported employees, and maintained office equipment."
+    },
+    {
+      "company": "KEY STAFF (outsourcing for UNITEL)",
+      "role": "Monitoring System Administrator",
+      "from": "2014-11",
+      "to": "2016-01",
+      "description": "Monitored the company IT infrastructure, billing systems, and business processes. Resolved issues in business applications and databases, tracked tablespaces, archived logs, and free disk space."
+    }
+  ]
+}

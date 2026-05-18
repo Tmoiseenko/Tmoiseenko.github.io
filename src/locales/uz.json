@@ -1,0 +1,53 @@
+{
+  "localeCode": "uz-UZ",
+  "pageTitle": "Timur Moiseenko — Veb dasturchi",
+  "dataSourceLabel": "Ma'lumot manbai",
+  "nav": {
+    "about": "Men haqimda",
+    "projects": "Loyihalar",
+    "skills": "Ko'nikmalar",
+    "experience": "Tajriba"
+  },
+  "language": {
+    "ru": "RU",
+    "en": "EN",
+    "uz": "UZ"
+  },
+  "hero": {
+    "availability": "Yangi loyihalar uchun ochiqman",
+    "contact": "Menga yozing"
+  },
+  "about": {
+    "title": "Falsafa",
+    "accent": "Texnik tajriba",
+    "endTransmission": "Uzatilish tugadi",
+    "competenciesTitle": "Asosiy kompetensiyalar"
+  },
+  "projects": {
+    "title": "Tanlangan",
+    "accent": "Ishlar"
+  },
+  "skills": {
+    "title": "Texnik",
+    "accent": "Ko'nikmalar"
+  },
+  "experience": {
+    "title": "Kasbiy",
+    "accent": "Tajriba",
+    "present": "hozirgacha",
+    "duration": {
+      "year": {
+        "one": "yil",
+        "other": "yil"
+      },
+      "month": {
+        "one": "oy",
+        "other": "oy"
+      }
+    }
+  },
+  "footer": {
+    "email": "Pochta",
+    "signature": "Minimalistik muhandislik // Strukturaviy yaxlitlik"
+  }
+}

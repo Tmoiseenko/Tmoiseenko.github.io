@@ -1,0 +1,164 @@
+{
+  "name": "Timur Moiseenko",
+  "role": "Veb dasturchi",
+  "bio": "10 yildan ortiq tajribaga ega dasturchi va tizim administratori. Men faqat kod yozish bilan cheklanmayman, balki natijaga yo'naltirilgan yechimlar ustida ishlayman. Kichik jamoalarda ham, yirik loyihalarda ham ishlaganman. Hozirda DevOps yo'nalishida faol rivojlanmoqdaman, bu esa menga ishonchli, barqaror va masshtablanuvchi ilovalar yaratishga yordam beradi.",
+  "about": "PHP 5.6/7/8, Python 3 va JavaScript bilan amaliy tajribam bor. WordPress va WooCommerce uchun yechimlar ishlab chiqdim: maxsus temalar, pluginlar va nostandart biznes mantiqi. Shuningdek, 1C-Bitrix bilan maxsus komponentlar, shablonlar va Symfony asosidagi kengaytmalar ustida ishlaganman. Mening stack'imga OctoberCMS, Laravel 6+, FastAPI, Symfony 5 va CodeIgniter 3 kiradi. Vue 2/3 bilan interfeyslar yarataman, Alpine.js bilan ham ozroq tajribam bor. REST va GraphQL API'larni loyihalayman, kundalik ishda Git va Docker'dan foydalanaman, MySQL, PostgreSQL va Oracle bilan bemalol ishlayman. Kichik jamoalarda ham, 50 kishigacha bo'lgan katta jamoalarda ham tajribam bor. Windows va Linux serverlarini boshqaraman, Zabbix, Prometheus va Grafana orqali infratuzilmani kuzataman, Yandex Cloud, Google Cloud va Timeweb Cloud bilan ishlaganman. Texnik hujjatlarni ingliz tilida bemalol o'qiy olaman va kundalik ishda qo'llayman. Shuningdek, open-source Moonshine admin paneli uchun bir nechta plugin yozganman va boshqargan loyihalarimda DevOps amaliyotlarini qo'llayman.",
+  "location": "O'zbekiston",
+  "email": "angrav-6@yandex.ru",
+  "avatar": "/images/me.png",
+  "socials": {
+    "github": "https://github.com/Tmoiseenko",
+    "telegram": "https://t.me/tmoiseenko",
+    "phone": "+998974554533"
+  },
+  "skills": [
+    { "name": "PHP", "category": "backend" },
+    { "name": "Laravel", "category": "backend" },
+    { "name": "Symfony", "category": "backend" },
+    { "name": "Python", "category": "tools" },
+    { "name": "FastAPI", "category": "backend" },
+    { "name": "WordPress / WooCommerce", "category": "cms" },
+    { "name": "1C-Bitrix", "category": "cms" },
+    { "name": "OctoberCMS", "category": "cms" },
+    { "name": "JS / jQuery", "category": "frontend" },
+    { "name": "Vue 2 / Vue 3", "category": "frontend" },
+    { "name": "MySQL", "category": "backend" },
+    { "name": "PostgreSQL", "category": "backend" },
+    { "name": "Docker", "category": "devops" },
+    { "name": "GitHub", "category": "devops" },
+    { "name": "GitLab", "category": "devops" },
+    { "name": "Yandex Cloud", "category": "devops" },
+    { "name": "Google Cloud", "category": "devops" },
+    { "name": "DevOps", "category": "devops" },
+    { "name": "Monitoring: Zabbix / Prometheus / Grafana", "category": "devops" }
+  ],
+  "competencies": [
+    {
+      "label": "Ishonchli backend",
+      "description": "Laravel va Symfony asosida masshtablanuvchi ilovalar, API integratsiyalari, arxitektura loyihalash va qo'llab-quvvatlanadigan server qismi kodi."
+    },
+    {
+      "label": "CMS arxitekturasi",
+      "description": "WordPress, WooCommerce, 1C-Bitrix va OctoberCMS uchun kengaytirilgan yechimlar: temalar, pluginlar, maxsus modullar va biznes mantiqi."
+    },
+    {
+      "label": "API va integratsiyalar",
+      "description": "Veb va mobil mahsulotlar uchun REST va GraphQL API'lar, CRM, to'lov tizimlari va tashqi servislar bilan integratsiyalar."
+    },
+    {
+      "label": "Frontend mantiqi",
+      "description": "Vue 2/3 asosidagi interaktiv interfeyslar, real-time funksiyalar, admin panellar va backend xizmatlari bilan frontend integratsiyasi."
+    },
+    {
+      "label": "Infratuzilma va DevOps",
+      "description": "Linux/Windows server administratsiyasi, Docker, cloud platformalar, monitoring va ishlab chiqarish barqarorligi."
+    },
+    {
+      "label": "Ma'lumotlar bazalari",
+      "description": "Sxema loyihalash, so'rovlarni optimallashtirish va MySQL, PostgreSQL hamda Oracle bilan production darajasida ishlash."
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Aglona.ru",
+      "description": "WordPress + WooCommerce uchun maxsus tema ishlab chiqilgan. Omborlar bo'yicha mahsulot mavjudligini bog'lash, ombor kesimidagi qoldiqni ko'rsatish va sevimlilar tizimi amalga oshirilgan.",
+      "tags": ["WordPress", "PHP", "WooCommerce"],
+      "link": "https://www.aglona.ru/",
+      "github": "https://github.com/Tmoiseenko/Aglona_WP_Theme"
+    },
+    {
+      "id": "2",
+      "title": "Kotly.uz",
+      "description": "Qozon-uskunalari ishlab chiqaruvchisi uchun katalog sayt. WordPress asosida ko'plab maxsus turlar va nostandart bloklarga ega tema ishlab chiqilgan.",
+      "tags": ["WordPress", "PHP", "Catalog"],
+      "link": "https://kotly.uz/"
+    },
+    {
+      "id": "3",
+      "title": "asakabank.uz",
+      "description": "Saytning administrativ qismi ishlab chiqilgan: statik sahifalarni tahrirlash vositasi va bank API orqali onlayn to'lov integratsiyasi.",
+      "tags": ["Laravel", "PHP", "Banking API"],
+      "link": "https://asakabank.uz/physical-persons/home"
+    },
+    {
+      "id": "4",
+      "title": "Veb konferensiyalar platformasi",
+      "description": "Ro'yxatdan o'tish, live chat, translyatsiya, statistikalar va xabarnomalar bilan to'liq webinar platforma.",
+      "tags": ["Laravel", "Vue 3", "WebSockets"],
+      "github": "https://github.com/Tmoiseenko/webconf_platform"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Aloqa formalaridan kelgan ma'lumotlarni qayta ishlash uchun API, 1C-Bitrix va bildirishnoma tizimlari bilan integratsiya.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "6",
+      "title": "Laravel do'koni",
+      "description": "Ko'p sotuvchili marketplace, moslashuvchan chegirma tizimi va JSON/YML import oqimlariga ega loyiha.",
+      "tags": ["Laravel", "PHP", "Docker"],
+      "github": "https://github.com/Tmoiseenko/Laravel_shop"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Freelance",
+      "role": "Dasturchi",
+      "from": "2018-02",
+      "to": "",
+      "description": "Xususiy amaliyot: Laravel ilovalari, OctoberCMS pluginlari va nostandart funksiyalar, GraphQL va REST API'lar, YooKassa integratsiyalari, avtomobil e'lonlari portali, kitob portali, tanishuv ilovasi API takomillashtirishlari, Avito punktlari uchun CRM va Backpack, Orchid hamda Moonshine asosidagi admin panellar. Shuningdek, FastAPI servislar, Vue 2/3 interfeyslari, arxitektura, ma'lumotlar bazasi loyihalash va DevOps jarayonlari ustida ishlaganman."
+    },
+    {
+      "company": "UNIVERSAL MOBILE SYSTEM",
+      "role": "Monitoring bo'yicha yetakchi mutaxassis",
+      "from": "2016-01",
+      "to": "",
+      "description": "Kompaniya IT infratuzilmasi, billing tizimlari va biznes jarayonlarini kuzatib borish. Zabbix, Nagios, Cacti va Icinga2 boshqaruvi. Tizim va servislarni monitoringga qo'shish, maxsus skriptlar va pluginlar yozish, incidentlarga javob berishni muvofiqlashtirish va monitoring jamoasi hisobot tizimini rivojlantirish."
+    },
+    {
+      "company": "Zebra Corporate Digital",
+      "role": "Backend dasturchi",
+      "from": "2022-02",
+      "to": "2022-06",
+      "description": "PHP 7, 1C-Bitrix va Symfony yordamida saytlar uchun yangi funksiyalar ishlab chiqildi. Agile / Scrum bo'yicha ishlash, vazifalarni baholash va code review bajarildi."
+    },
+    {
+      "company": "Novikova Agentligi",
+      "role": "PHP dasturchi",
+      "from": "2021-05",
+      "to": "2022-05",
+      "description": "Onlayn tadbirlar platformasini qo'llab-quvvatlash va boshqarish. Yandex Cloud serverlarini boshqarish va Laravel + Vue ilovasini qo'llab-quvvatlash."
+    },
+    {
+      "company": "Blueglass",
+      "role": "WordPress dasturchi",
+      "from": "2021-05",
+      "to": "2022-03",
+      "description": "WordPress'ga frontend kodni integratsiya qilish va platforma asosida saytlar hamda e-commerce tizimlari uchun maxsus yechimlar yaratish."
+    },
+    {
+      "company": "ALEX INFORMATION TECHNOLOGY",
+      "role": "PHP dasturchi",
+      "from": "2020-04",
+      "to": "2020-12",
+      "description": "WordPress'ga frontend kod integratsiyasi, saytlar va e-commerce tizimlari uchun maxsus yechimlar, CodeIgniter 3 va Laravel bilan ishlash, to'lov va CRM API'larini integratsiya qilish."
+    },
+    {
+      "company": "EXPERA INFORM ENGENERING",
+      "role": "Tizim administratori",
+      "from": "2015-05",
+      "to": "2015-12",
+      "description": "Tarmoq va server arxitekturasi, virtualizatsiya tizimlari va Panasonic mini-PBX boshqaruvi. Nosozliklarni bartaraf etish, xodimlarga yordam berish va ofis uskunalarini qo'llab-quvvatlash."
+    },
+    {
+      "company": "KEY STAFF (UNITEL uchun autsorsing)",
+      "role": "Monitoring tizimi administratori",
+      "from": "2014-11",
+      "to": "2016-01",
+      "description": "Kompaniya IT infratuzilmasi, billing tizimlari va biznes jarayonlarini monitoring qilish. Biznes ilovalar va bazalardagi muammolarni bartaraf etish, tablespace'larni kuzatish, loglarni arxivlash va diskdagi bo'sh joyni nazorat qilish."
+    }
+  ]
+}

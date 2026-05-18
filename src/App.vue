@@ -1,43 +1,89 @@
 <script setup lang="ts">
+import { computed, ref, watch } from "vue";
 import { Github, ArrowUpRight, Terminal } from "lucide-vue-next";
-import portfolioData from "./portfolio.json";
-import { PortfolioData } from "./types";
+import portfolioRu from "./portfolio/ru.json";
+import portfolioEn from "./portfolio/en.json";
+import portfolioUz from "./portfolio/uz.json";
+import uiRu from "./locales/ru.json";
+import uiEn from "./locales/en.json";
+import uiUz from "./locales/uz.json";
+import { PluralForms, PortfolioData, UiDictionary } from "./types";
 
-const data = portfolioData as PortfolioData;
-const year = new Date().getFullYear();
+type Locale = "ru" | "en" | "uz";
 
-const monthNames = [
-  "Январь",
-  "Февраль",
-  "Март",
-  "Апрель",
-  "Май",
-  "Июнь",
-  "Июль",
-  "Август",
-  "Сентябрь",
-  "Октябрь",
-  "Ноябрь",
-  "Декабрь",
-];
+const portfolioByLocale: Record<Locale, PortfolioData> = {
+  ru: portfolioRu as PortfolioData,
+  en: portfolioEn as PortfolioData,
+  uz: portfolioUz as PortfolioData,
+};
+
+const uiByLocale: Record<Locale, UiDictionary> = {
+  ru: uiRu as UiDictionary,
+  en: uiEn as UiDictionary,
+  uz: uiUz as UiDictionary,
+};
+
+const localeStorageKey = "portfolio-locale";
+
+function detectLocale(): Locale {
+  if (typeof window === "undefined") return "en";
+
+  const stored = window.localStorage.getItem(localeStorageKey);
+  if (stored === "ru" || stored === "en" || stored === "uz") return stored;
+
+  const browserLocale = window.navigator.language.toLowerCase();
+  if (browserLocale.startsWith("ru")) return "ru";
+  if (browserLocale.startsWith("uz")) return "uz";
+  return "en";
+}
+
+const currentLocale = ref<Locale>(detectLocale());
+const data = computed(() => portfolioByLocale[currentLocale.value]);
+const ui = computed(() => uiByLocale[currentLocale.value]);
+const currentYear = computed(() => new Date().getFullYear());
+const sourceFile = computed(() => `portfolio/${currentLocale.value}.json`);
+
+const navItems = computed(() => [
+  { key: "about", label: ui.value.nav.about },
+  { key: "projects", label: ui.value.nav.projects },
+  { key: "skills", label: ui.value.nav.skills },
+  { key: "experience", label: ui.value.nav.experience },
+]);
+
+watch(
+  currentLocale,
+  (locale) => {
+    if (typeof window === "undefined") return;
+
+    window.localStorage.setItem(localeStorageKey, locale);
+    document.documentElement.lang = locale;
+    document.title = uiByLocale[locale].pageTitle;
+  },
+  { immediate: true },
+);
+
+function setLocale(locale: Locale) {
+  currentLocale.value = locale;
+}
 
 function parseMonth(value: string) {
   const [yearPart, monthPart] = value.split("-").map(Number);
   return { year: yearPart, month: monthPart };
 }
 
-function pluralizeRu(value: number, one: string, few: string, many: string) {
-  const mod10 = value % 10;
-  const mod100 = value % 100;
-
-  if (mod10 === 1 && mod100 !== 11) return one;
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return few;
-  return many;
+function getPluralForm(value: number, forms: PluralForms) {
+  const pluralRule = new Intl.PluralRules(ui.value.localeCode).select(value) as keyof PluralForms;
+  return forms[pluralRule] ?? forms.other ?? forms.many ?? forms.few ?? forms.one;
 }
 
 function formatMonth(value: string) {
   const { year, month } = parseMonth(value);
-  return `${monthNames[month - 1]} ${year}`;
+  const formatted = new Intl.DateTimeFormat(ui.value.localeCode, {
+    month: "long",
+    year: "numeric",
+  }).format(new Date(year, month - 1, 1));
+
+  return formatted.charAt(0).toUpperCase() + formatted.slice(1);
 }
 
 function getMonthDifference(from: string, to: string) {
@@ -47,20 +93,20 @@ function getMonthDifference(from: string, to: string) {
 }
 
 function formatDuration(from: string, to: string) {
-  const endValue = to || `${year}-${String(new Date().getMonth() + 1).padStart(2, "0")}`;
+  const endValue = to || `${currentYear.value}-${String(new Date().getMonth() + 1).padStart(2, "0")}`;
   const totalMonths = getMonthDifference(from, endValue);
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
   const parts: string[] = [];
 
-  if (years > 0) parts.push(`${years} ${pluralizeRu(years, "год", "года", "лет")}`);
-  if (months > 0) parts.push(`${months} ${pluralizeRu(months, "месяц", "месяца", "месяцев")}`);
+  if (years > 0) parts.push(`${years} ${getPluralForm(years, ui.value.experience.duration.year)}`);
+  if (months > 0) parts.push(`${months} ${getPluralForm(months, ui.value.experience.duration.month)}`);
 
   return parts.join(" ");
 }
 
 function formatExperiencePeriod(from: string, to: string) {
-  const endLabel = to ? formatMonth(to) : "по настоящее время";
+  const endLabel = to ? formatMonth(to) : ui.value.experience.present;
   return `${formatMonth(from)} — ${endLabel} (${formatDuration(from, to)})`;
 }
 </script>
@@ -78,10 +124,38 @@ function formatExperiencePeriod(from: string, to: string) {
           <span class="text-[10px] font-mono text-accent leading-none mt-1 uppercase tracking-widest">// {{ data.role }}</span>
         </div>
       </div>
-      <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-        <a v-for="item in [{ key: 'about', label: 'Обо мне' }, { key: 'projects', label: 'Проекты' }, { key: 'skills', label: 'Навыки' }, { key: 'experience', label: 'Опыт' }]" :key="item.key" :href="`#${item.key}`" class="hover:text-accent transition-colors">
-          {{ item.label }}
-        </a>
+      <div class="flex items-center gap-4 md:gap-8">
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+          <a v-for="item in navItems" :key="item.key" :href="`#${item.key}`" class="hover:text-accent transition-colors">
+            {{ item.label }}
+          </a>
+        </div>
+        <div class="flex items-center gap-1 border border-slate-800 bg-slate-900/50 p-1 rounded-sm">
+          <button
+            type="button"
+            class="px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] transition-colors rounded-sm"
+            :class="currentLocale === 'ru' ? 'bg-accent text-slate-950' : 'text-slate-400 hover:text-white'"
+            @click="setLocale('ru')"
+          >
+            {{ ui.language.ru }}
+          </button>
+          <button
+            type="button"
+            class="px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] transition-colors rounded-sm"
+            :class="currentLocale === 'en' ? 'bg-accent text-slate-950' : 'text-slate-400 hover:text-white'"
+            @click="setLocale('en')"
+          >
+            {{ ui.language.en }}
+          </button>
+          <button
+            type="button"
+            class="px-3 py-1 text-[10px] font-mono uppercase tracking-[0.2em] transition-colors rounded-sm"
+            :class="currentLocale === 'uz' ? 'bg-accent text-slate-950' : 'text-slate-400 hover:text-white'"
+            @click="setLocale('uz')"
+          >
+            {{ ui.language.uz }}
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -102,7 +176,7 @@ function formatExperiencePeriod(from: string, to: string) {
         </div>
 
         <div class="flex-1">
-          <span class="text-accent font-mono text-xs tracking-[0.3em] uppercase mb-6 block">Открыт для новых проектов</span>
+          <span class="text-accent font-mono text-xs tracking-[0.3em] uppercase mb-6 block">{{ ui.hero.availability }}</span>
           <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 uppercase italic leading-none max-w-4xl">
             {{ data.name }}
           </h1>
@@ -120,7 +194,7 @@ function formatExperiencePeriod(from: string, to: string) {
                 </svg>
               </a>
               <a :href="`mailto:${data.email}`" class="px-8 h-12 flex items-center justify-center bg-accent text-slate-950 font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-white transition-all">
-                Написать мне
+                {{ ui.hero.contact }}
               </a>
             </div>
           </div>
@@ -132,8 +206,8 @@ function formatExperiencePeriod(from: string, to: string) {
     <section v-if="data.about" id="about" class="py-24 px-6 md:px-12 lg:px-24">
       <div class="mb-12 flex justify-between items-end border-b border-white/5 pb-6">
         <div>
-          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">Источник данных // portfolio.json</span>
-          <h2 class="text-4xl font-light tracking-tight">Философия <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">// Технический бэкграунд</span></h2>
+          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">{{ ui.dataSourceLabel }} // {{ sourceFile }}</span>
+          <h2 class="text-4xl font-light tracking-tight">{{ ui.about.title }} <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">// {{ ui.about.accent }}</span></h2>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
@@ -143,11 +217,11 @@ function formatExperiencePeriod(from: string, to: string) {
           </div>
           <div class="mt-8 flex items-center gap-4 text-accent font-mono text-[10px] uppercase tracking-widest">
             <Terminal class="w-4 h-4" />
-            <span>Конец передачи</span>
+            <span>{{ ui.about.endTransmission }}</span>
           </div>
         </div>
         <div class="bg-slate-900/30 border border-slate-800 p-10 rounded-sm">
-          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">Ключевые компетенции</h3>
+          <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">{{ ui.about.competenciesTitle }}</h3>
           <div class="space-y-6">
             <div v-for="item in data.competencies" :key="item.label" class="group">
               <div class="text-slate-200 font-bold text-sm mb-1 group-hover:text-accent transition-colors">{{ item.label }}</div>
@@ -162,8 +236,8 @@ function formatExperiencePeriod(from: string, to: string) {
     <section id="projects" class="py-24 px-6 md:px-12 lg:px-24">
       <div class="mb-12 flex justify-between items-end border-b border-white/5 pb-6">
         <div>
-          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">Источник данных // portfolio.json</span>
-          <h2 class="text-4xl font-light tracking-tight">Избранные <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">Работы</span></h2>
+          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">{{ ui.dataSourceLabel }} // {{ sourceFile }}</span>
+          <h2 class="text-4xl font-light tracking-tight">{{ ui.projects.title }} <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">{{ ui.projects.accent }}</span></h2>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -205,8 +279,8 @@ function formatExperiencePeriod(from: string, to: string) {
     <section id="skills" class="py-24 px-6 md:px-12 lg:px-24">
       <div class="mb-12 flex justify-between items-end border-b border-white/5 pb-6">
         <div>
-          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">Источник данных // portfolio.json</span>
-          <h2 class="text-4xl font-light tracking-tight">Технические <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">Навыки</span></h2>
+          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">{{ ui.dataSourceLabel }} // {{ sourceFile }}</span>
+          <h2 class="text-4xl font-light tracking-tight">{{ ui.skills.title }} <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">{{ ui.skills.accent }}</span></h2>
         </div>
       </div>
       <div class="flex flex-wrap gap-4">
@@ -221,8 +295,8 @@ function formatExperiencePeriod(from: string, to: string) {
     <section id="experience" class="py-24 px-6 md:px-12 lg:px-24">
       <div class="mb-12 flex justify-between items-end border-b border-white/5 pb-6">
         <div>
-          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">Источник данных // portfolio.json</span>
-          <h2 class="text-4xl font-light tracking-tight">Профессиональный <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">Опыт</span></h2>
+          <span class="text-accent font-mono text-[10px] tracking-[0.2em] uppercase mb-1 block">{{ ui.dataSourceLabel }} // {{ sourceFile }}</span>
+          <h2 class="text-4xl font-light tracking-tight">{{ ui.experience.title }} <span class="font-bold text-accent underline decoration-1 underline-offset-8 decoration-accent/30">{{ ui.experience.accent }}</span></h2>
         </div>
       </div>
       <div class="space-y-16 max-w-4xl">
@@ -248,14 +322,14 @@ function formatExperiencePeriod(from: string, to: string) {
     <footer class="py-20 border-t border-slate-800 bg-slate-950/50 px-6 md:px-12 lg:px-24">
       <div class="flex flex-col md:flex-row justify-between items-center gap-10">
         <div class="flex gap-12 text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500">
-          <a v-if="data.socials.github" :href="data.socials.github" class="hover:text-accent transition-colors">Github</a>
+          <a v-if="data.socials.github" :href="data.socials.github" class="hover:text-accent transition-colors">GitHub</a>
           <a v-if="data.socials.telegram" :href="data.socials.telegram" class="hover:text-accent transition-colors">Telegram</a>
-          <a :href="`mailto:${data.email}`" class="hover:text-accent transition-colors">Email</a>
+          <a :href="`mailto:${data.email}`" class="hover:text-accent transition-colors">{{ ui.footer.email }}</a>
         </div>
 
       </div>
       <div class="mt-16 text-center text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-        © {{ year }} • Минималистичная разработка // Структурная целостность
+        © {{ currentYear }} • {{ ui.footer.signature }}
       </div>
     </footer>
   </div>

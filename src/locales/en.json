@@ -1,0 +1,53 @@
+{
+  "localeCode": "en-US",
+  "pageTitle": "Timur Moiseenko — Web Developer",
+  "dataSourceLabel": "Data source",
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience"
+  },
+  "language": {
+    "ru": "RU",
+    "en": "EN",
+    "uz": "UZ"
+  },
+  "hero": {
+    "availability": "Available for projects",
+    "contact": "Contact me"
+  },
+  "about": {
+    "title": "Philosophy",
+    "accent": "Technical background",
+    "endTransmission": "End transmission",
+    "competenciesTitle": "Core competencies"
+  },
+  "projects": {
+    "title": "Featured",
+    "accent": "Work"
+  },
+  "skills": {
+    "title": "Technical",
+    "accent": "Skills"
+  },
+  "experience": {
+    "title": "Professional",
+    "accent": "Experience",
+    "present": "present",
+    "duration": {
+      "year": {
+        "one": "year",
+        "other": "years"
+      },
+      "month": {
+        "one": "month",
+        "other": "months"
+      }
+    }
+  },
+  "footer": {
+    "email": "Email",
+    "signature": "Minimalist engineering // Structural integrity"
+  }
+}

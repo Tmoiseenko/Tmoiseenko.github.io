@@ -1,0 +1,165 @@
+{
+  "name": "Тимур Моисеенко",
+  "role": "Web разработчик",
+  "bio": "Разработчик и системный администратор с более чем 10-летним стажем. Занимаюсь не просто написанием кода, а разработкой решений, которые нацелены на результат. Имею опыт работы как в небольших командах, так и в крупных проектах. В настоящее время активно развиваюсь в направлении DevOps, что позволяет мне не только создавать качественные приложения, но и обеспечивать их стабильную работу и масштабируемость.",
+  "about": "Имею опыт разработки на языках PHP 5.6/7/8, Python 3 и JavaScript. Разрабатывал решения для CMS WordPress и WooCommerce: создание тем, доработка стандартного и нестандартного функционала, разработка плагинов. Работал с 1С-Битрикс: шаблоны компонентов, новые компоненты, нестандартный функционал с использованием Symfony. Активно использовал OctoberCMS, Laravel 6+, FastAPI, Symfony 5 и CodeIgniter 3. Разрабатывал пользовательские интерфейсы на Vue 2/3, немного работал с Alpine.js. Проектирую REST API и GraphQL API. Использую Git и Docker в разработке. Хорошо работаю с MySQL, PostgreSQL и Oracle. Есть опыт работы как в командах до 5 человек, так и в крупных проектах с командами до 50 человек. Занимаюсь администрированием Windows- и Linux-серверов, мониторингом инфраструктуры через Zabbix, Prometheus и Grafana, а также работал с Yandex Cloud, Google Cloud и Timeweb Cloud. Свободно читаю техническую документацию на английском и веду переписку. Написал несколько плагинов для open-source проекта Moonshine и применяю DevOps-практики в проектах, которые веду.",
+  "location": "Узбекистан",
+  "email": "angrav-6@yandex.ru",
+  "avatar": "/images/me.png",
+  "socials": {
+    "github": "https://github.com/Tmoiseenko",
+    "telegram": "https://t.me/tmoiseenko",
+    "phone": "+998974554533"
+  },
+  "skills": [
+    { "name": "PHP", "category": "backend" },
+    { "name": "Laravel", "category": "backend" },
+    { "name": "Symfony", "category": "backend" },
+    { "name": "Python", "category": "tools" },
+    { "name": "FastAPI", "category": "backend" },
+    { "name": "WordPress / WooCommerce", "category": "cms" },
+    { "name": "1С-Битрикс", "category": "cms" },
+    { "name": "OctoberCMS", "category": "cms" },
+    { "name": "JS / jQuery", "category": "frontend" },
+    { "name": "Vue 2 / Vue 3", "category": "frontend" },
+    { "name": "MySQL", "category": "backend" },
+    { "name": "PostgreSQL", "category": "backend" },
+    { "name": "Docker", "category": "devops" },
+    { "name": "GitHub", "category": "devops" },
+    { "name": "GitLab", "category": "devops" },
+    { "name": "Yandex Cloud", "category": "devops" },
+    { "name": "Google Cloud", "category": "devops" },
+    { "name": "DevOps", "category": "devops" },
+    { "name": "Мониторинг: Zabbix / Prometheus / Grafana", "category": "devops" }
+  ],
+  "competencies": [
+    {
+      "label": "Надёжный бэкенд",
+      "description": "Масштабируемые приложения на Laravel и Symfony, проектирование архитектуры, интеграции API и чистый серверный код."
+    },
+    {
+      "label": "CMS-архитектура",
+      "description": "Продвинутые решения на WordPress, WooCommerce, 1С-Битрикс и OctoberCMS: темы, плагины, кастомные модули и нестандартная бизнес-логика."
+    },
+    {
+      "label": "API и интеграции",
+      "description": "REST и GraphQL API для веб- и мобильных приложений, интеграции с CRM, платёжными сервисами и внешними системами."
+    },
+    {
+      "label": "Фронтенд-логика",
+      "description": "Интерактивные интерфейсы на Vue 2/3, real-time сценарии, админ-панели и связка фронтенда с backend API."
+    },
+    {
+      "label": "Инфраструктура и DevOps",
+      "description": "Администрирование Linux/Windows серверов, Docker, облака, мониторинг и поддержка стабильной работы проектов."
+    },
+    {
+      "label": "Базы данных",
+      "description": "Проектирование схем, оптимизация запросов и работа с MySQL, PostgreSQL и Oracle в реальных production-задачах."
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Aglona.ru",
+      "description": "Разработка темы для WordPress + WooCommerce. Реализация складов и привязки наличия товаров к конкретному складу. Собственная реализация избранного.",
+      "tags": ["WordPress", "PHP", "WooCommerce"],
+      "link": "https://www.aglona.ru/",
+      "github": "https://github.com/Tmoiseenko/Aglona_WP_Theme"
+    },
+    {
+      "id": "2",
+      "title": "Kotly.uz",
+      "description": "Сайт-каталог для производителя котельного оборудования. Разработка темы для WordPress с множеством кастомных типов и нестандартных блоков.",
+      "tags": ["WordPress", "PHP", "Catalog"],
+      "link": "https://kotly.uz/"
+    },
+    {
+      "id": "3",
+      "title": "asakabank.uz",
+      "description": "Разработка административной части сайта. Инструмент редактирования статических страниц и реализация онлайн-оплаты через банковский API.",
+      "tags": ["Laravel", "PHP", "Banking API"],
+      "link": "https://asakabank.uz/physical-persons/home"
+    },
+    {
+      "id": "4",
+      "title": "Платформа для веб-конференций",
+      "description": "Полноценная платформа для вебинаров: регистрация, онлайн-чат, трансляция, статистика и рассылки.",
+      "tags": ["Laravel", "Vue 3", "WebSockets"],
+      "github": "https://github.com/Tmoiseenko/webconf_platform"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Разработка API для обработки данных с форм обратной связи, интеграция с 1С-Битрикс и системами уведомлений.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "6",
+      "title": "Магазин на Laravel",
+      "description": "Маркетплейс с поддержкой разных продавцов, гибкой системой скидок и импортом данных из JSON/YML.",
+      "tags": ["Laravel", "PHP", "Docker"],
+      "github": "https://github.com/Tmoiseenko/Laravel_shop"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Фриланс",
+      "role": "Разработчик",
+      "from": "2018-02",
+      "to": "",
+      "description": "Частная практика: разработка приложений на Laravel, плагинов и нестандартного функционала для OctoberCMS. Разработка GraphQL API и REST API, интеграции с YooKassa, портала объявлений по продаже автомобилей, книжного портала, доработок API для мобильного приложения знакомств, CRM для пунктов выдачи Авито и админ-панелей на Backpack, Orchid и Moonshine. Разработка API на FastAPI и интерфейсов на Vue 2/3, проектирование архитектуры приложений и баз данных, DevOps на текущих проектах."
+    },
+    {
+      "company": "ООО «UNIVERSAL MOBILE SYSTEM»",
+      "role": "Ведущий специалист группы мониторинга",
+      "from": "2016-01",
+      "to": "",
+      "description": "Мониторинг IT-инфраструктуры компании, биллинговой системы и бизнес-процессов. Администрирование Zabbix, Nagios, Cacti и Icinga2. Постановка систем и сервисов на мониторинг, написание скриптов и плагинов для нестандартных сценариев, координация устранения аварийных ситуаций, разработка и поддержка системы отчетности рабочей группы."
+    },
+    {
+      "company": "Zebra Corporate Digital",
+      "role": "Backend-разработчик",
+      "from": "2022-02",
+      "to": "2022-06",
+      "description": "Разработка нового функционала для сайтов на PHP 7, 1С-Битрикс и Symfony. Работа по Agile / Scrum, оценка задач и code review в команде."
+    },
+    {
+      "company": "Агентство Новиковой",
+      "role": "PHP-разработчик",
+      "from": "2021-05",
+      "to": "2022-05",
+      "description": "Доработка, сопровождение и администрирование платформы для проведения онлайн-мероприятий. Администрирование серверов в Yandex Cloud. Поддержка проекта на связке Laravel + Vue."
+    },
+    {
+      "company": "Blueglass",
+      "role": "WordPress-разработчик",
+      "from": "2021-05",
+      "to": "2022-03",
+      "description": "Внедрение верстки в CMS WordPress и реализация нестандартных решений для сайтов и e-commerce проектов на этой платформе."
+    },
+    {
+      "company": "ООО ALEX INFORMATION TECHNOLOGY",
+      "role": "PHP-разработчик",
+      "from": "2020-04",
+      "to": "2020-12",
+      "description": "Внедрение верстки в CMS WordPress, реализация нестандартных решений для сайтов и систем онлайн-коммерции. Разработка на CodeIgniter 3 и Laravel, интеграция с API платёжных систем и CRM."
+    },
+    {
+      "company": "ООО «EXPERA INFORM ENGENERING»",
+      "role": "Системный администратор",
+      "from": "2015-05",
+      "to": "2015-12",
+      "description": "Администрирование сетевой и серверной архитектуры, системы виртуализации и мини-АТС Panasonic. Устранение неисправностей, помощь сотрудникам и обслуживание офисной техники."
+    },
+    {
+      "company": "ООО «KEY STAFF» (аутсорсинг компании ООО «UNITEL»)",
+      "role": "Дежурный администратор системы мониторинга",
+      "from": "2014-11",
+      "to": "2016-01",
+      "description": "Мониторинг IT-инфраструктуры компании, биллинговой системы и бизнес-процессов. Устранение неисправностей в работе бизнес-приложений и баз данных, контроль табличных пространств, архивов логов и свободного места на дисках."
+    }
+  ]
+}
+
