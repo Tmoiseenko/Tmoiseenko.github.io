@@ -60,9 +60,66 @@
   ],
   "projects": [
     {
+      "id": "8",
+      "title": "My Avoska",
+      "description": "Developed an API for a mobile grocery ordering app and an admin app for managing orders, staff, products, and content. Integrated payment systems and external services, plus synchronization with 1C. Implemented product search and filtering, push notifications, statistics, and reports. Stack: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Developed and maintained cloud infrastructure. System Administration + DevOps + Tech Lead.",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.avoska&hl=ru"
+    },
+    {
+      "id": "9",
+      "title": "FreshMarket28",
+      "description": "Developed an API for a mobile grocery ordering app and an admin app for managing orders, staff, products, and content. Integrated payment systems and external services, plus synchronization with 1C. Implemented product search and filtering, push notifications, statistics, and reports. Stack: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Developed and maintained cloud infrastructure. System Administration + DevOps + Tech Lead.",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.freshmarket&hl=ru"
+    },
+    {
+      "id": "10",
+      "title": "Prometheus Mobile Monitor",
+      "description": "A mobile application for receiving data from Prometheus and displaying it as charts. Built to explore Flutter technology and better understand the stack used in other applications.",
+      "tags": ["Flutter", "Prometheus"],
+      "link": "https://github.com/Tmoiseenko/prometheus-mobile-monitor"
+    },
+    {
+      "id": "11",
+      "title": "Jambim: Events & Dating",
+      "description": "Developed a GraphQL API for a mobile app focused on event discovery and dating. Built the backend with Laravel.",
+      "tags": ["PHP", "OctoberCMS", "GraphQL"],
+      "github": "https://github.com/Tmoiseenko/timo-portfolio",
+      "link": "https://octobercms.com/plugin/timo-portfolio"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Developed an API for processing feedback form data, with integrations into 1C-Bitrix and notification systems.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "12",
+      "title": "Resume / Portfolio",
+      "description": "A plugin for creating portfolio/resume websites on OctoberCMS. The plugin allows creating sections such as education, work experience, projects, skills, technologies, and user information.",
+      "tags": ["PHP", "OctoberCMS", "Plugin"],
+      "link": "https://play.google.com/store/apps/details?id=com.jambim&hl=ru"
+    },
+    {
+      "id": "7",
+      "title": "Omsk Region MFC Website",
+      "description": "Migrated from a custom Python + Django solution to 1C-Bitrix. Full-stack development in a two-person team. Integrated with external APIs.",
+      "tags": ["1C-Bitrix", "PHP"],
+      "link": "https://xn----ttbebjtrq.xn--p1ai/"
+    },
+    {
+      "id": "7",
+      "title": "Reval Stone online shop",
+      "description": "Developed an online store on WordPress + WooCommerce. Built a custom theme and plugins for external API integrations. Implemented a complex countertop order calculator and a plugin for delivery cost calculation across Europe, including all taxes and transport expenses.",
+      "tags": ["Wordpress", "WooCommerce", "PHP", "Jquery", "JS"],
+      "link": "https://revalstone.com/shop/en/"
+    },
+    {
       "id": "1",
       "title": "Aglona.ru",
-      "description": "Custom WordPress + WooCommerce theme development. Implemented warehouse support, product stock mapping per warehouse, and a custom favorites system.",
+      "description": "Developed a WordPress + WooCommerce theme. Implemented warehouse management and product stock mapping to specific warehouses. Built a custom favorites feature.",
       "tags": ["WordPress", "PHP", "WooCommerce"],
       "link": "https://www.aglona.ru/",
       "github": "https://github.com/Tmoiseenko/Aglona_WP_Theme"
@@ -70,35 +127,28 @@
     {
       "id": "2",
       "title": "Kotly.uz",
-      "description": "Catalog website for a boiler equipment manufacturer. Built a custom WordPress theme with multiple custom post types and non-standard content blocks.",
+      "description": "A catalog website for a boiler equipment manufacturer. Developed a WordPress theme with many custom post types and non-standard blocks.",
       "tags": ["WordPress", "PHP", "Catalog"],
       "link": "https://kotly.uz/"
     },
     {
       "id": "3",
       "title": "asakabank.uz",
-      "description": "Built the administrative part of the website, including a static-page editing tool and online payment integration with a banking API.",
+      "description": "Developed the administrative part of the website, including a static-page editing tool and online payment integration via a banking API.",
       "tags": ["Laravel", "PHP", "Banking API"],
       "link": "https://asakabank.uz/physical-persons/home"
     },
     {
       "id": "4",
       "title": "Web Conference Platform",
-      "description": "A full webinar platform with registration, live chat, streaming, analytics, and mailing features.",
+      "description": "A full-featured webinar platform: registration, online chat, streaming, analytics, and mailings.",
       "tags": ["Laravel", "Vue 3", "WebSockets"],
       "github": "https://github.com/Tmoiseenko/webconf_platform"
     },
     {
-      "id": "5",
-      "title": "BELUGA GROUP",
-      "description": "Built an API for processing feedback form data with integrations into 1C-Bitrix and notification systems.",
-      "tags": ["1C-Bitrix", "Symfony", "API"],
-      "link": "https://belugagroup.ru/"
-    },
-    {
       "id": "6",
       "title": "Laravel Store",
-      "description": "Marketplace with multi-vendor support, flexible discount logic, and JSON/YML import flows.",
+      "description": "A marketplace supporting multiple sellers, a flexible discount system, and JSON/YML data import.",
       "tags": ["Laravel", "PHP", "Docker"],
       "github": "https://github.com/Tmoiseenko/Laravel_shop"
     }

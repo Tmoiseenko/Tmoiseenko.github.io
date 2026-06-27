@@ -60,6 +60,63 @@
   ],
   "projects": [
     {
+      "id": "8",
+      "title": "Моя авоська",
+      "description": "Разработка API для мобильного приложения по заказу продуктов и административного приложения для управления заказами, персоналом, продуктами и контентом. Интеграция с платёжными системами, внешними сервисами. синхронизация с 1С. Поиск и фильтрация товаров, push-уведомления, статистика и отчёты. Стек: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Разработка и поддержка инфраструктуры в облаке. Системное Администрирование + DevOps + Tech lead",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.avoska&hl=ru"
+    },
+    {
+      "id": "9",
+      "title": "FreshMarket28",
+      "description": "Разработка API для мобильного приложения по заказу продуктов и административного приложения для управления заказами, персоналом, продуктами и контентом. Интеграция с платёжными системами, внешними сервисами. синхронизация с 1С. Поиск и фильтрация товаров, push-уведомления, статистика и отчёты. Стек: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Разработка и поддержка инфраструктуры в облаке. Системное Администрирование + DevOps + Tech lead",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.freshmarket&hl=ru"
+    },
+    {
+      "id": "10",
+      "title": "Prometheus Mobile Monitor",
+      "description": "Мобильное приложение для полученния данных от Prometheus и отображения их в виде графиков. Разрабатывал для ознакомления с flutter технологией чтобы понимать стек используемый в других приложениях.",
+      "tags": ["Flutter", "Prometheus"],
+      "link": "https://github.com/Tmoiseenko/prometheus-mobile-monitor"
+    },
+    {
+      "id": "11",
+      "title": "Jambim: Афиша & Знакомства",
+      "description": "Разработка GraphQL API для мобильного приложения по поиску мероприятий и знакомств. Разработка бэкенд на Laravel.",
+      "tags": ["PHP", "OctoberCMS", "GraphQL"],
+      "github": "https://github.com/Tmoiseenko/timo-portfolio",
+      "link": "https://octobercms.com/plugin/timo-portfolio"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Разработка API для обработки данных с форм обратной связи, интеграция с 1С-Битрикс и системами уведомлений.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "12",
+      "title": "Resume / Portfolio",
+      "description": "Плагин для создания портволио/резюме на OctoberCMS. Этот плагин позволяет создавать такие разделы, как образование, опыт работы, проекты, навыки, технологии и информация о пользователе.",
+      "tags": ["PHP", "OctoberCMS", "Plugin"],
+      "link": "https://play.google.com/store/apps/details?id=com.jambim&hl=ru"
+    },
+    {
+      "id": "7",
+      "title": "Сайт МФЦ Омской области",
+      "description": "Переход от самописного решения на python + Django на 1С-Битрикс. Разработка фуллстек в команде из двух человек. Интеграция с внешними API.",
+      "tags": ["1C-Bitrix", "PHP"],
+      "link": "https://xn----ttbebjtrq.xn--p1ai/"
+    },
+    {
+      "id": "7",
+      "title": "Reval Stone online shop",
+      "description": "Разработка интернет магазина на Wordpress + WooCommerce. Разработка темы и плагинов для интеграции с внешними API. Разработка калькулятора для заказа столешниц из камня со сложной логикой. Разработка плагина для расчета доставки по европе с учетом всех налоговых и транспортных расходов.",
+      "tags": ["Wordpress", "WooCommerce", "PHP", "Jquery", "JS"],
+      "link": "https://revalstone.com/shop/en/"
+    },
+    {
       "id": "1",
       "title": "Aglona.ru",
       "description": "Разработка темы для WordPress + WooCommerce. Реализация складов и привязки наличия товаров к конкретному складу. Собственная реализация избранного.",
@@ -87,13 +144,6 @@
       "description": "Полноценная платформа для вебинаров: регистрация, онлайн-чат, трансляция, статистика и рассылки.",
       "tags": ["Laravel", "Vue 3", "WebSockets"],
       "github": "https://github.com/Tmoiseenko/webconf_platform"
-    },
-    {
-      "id": "5",
-      "title": "BELUGA GROUP",
-      "description": "Разработка API для обработки данных с форм обратной связи, интеграция с 1С-Битрикс и системами уведомлений.",
-      "tags": ["1C-Bitrix", "Symfony", "API"],
-      "link": "https://belugagroup.ru/"
     },
     {
       "id": "6",

@@ -60,9 +60,66 @@
   ],
   "projects": [
     {
+      "id": "8",
+      "title": "Mening avoskam",
+      "description": "Mahsulot buyurtma qilish uchun mobil ilova va buyurtmalar, xodimlar, mahsulotlar hamda kontentni boshqarish uchun admin ilova uchun API ishlab chiqildi. To'lov tizimlari va tashqi servislar bilan integratsiya qilindi, 1C bilan sinxronizatsiya amalga oshirildi. Mahsulot qidirish va filtrlash, push-bildirishnomalar, statistika va hisobotlar joriy qilindi. Stack: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Bulut infratuzilmasi ishlab chiqildi va qo'llab-quvvatlandi. Tizim administratsiyasi + DevOps + Tech Lead.",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.avoska&hl=ru"
+    },
+    {
+      "id": "9",
+      "title": "FreshMarket28",
+      "description": "Mahsulot buyurtma qilish uchun mobil ilova va buyurtmalar, xodimlar, mahsulotlar hamda kontentni boshqarish uchun admin ilova uchun API ishlab chiqildi. To'lov tizimlari va tashqi servislar bilan integratsiya qilindi, 1C bilan sinxronizatsiya amalga oshirildi. Mahsulot qidirish va filtrlash, push-bildirishnomalar, statistika va hisobotlar joriy qilindi. Stack: Python 3 + FastAPI, PostgreSQL, Docker, Vue 3 + Quasar, Dart + Flutter. Bulut infratuzilmasi ishlab chiqildi va qo'llab-quvvatlandi. Tizim administratsiyasi + DevOps + Tech Lead.",
+      "tags": ["Python", "FastApi", "Docker", "Vue 3", "Flutter", "PostgreSQL"],
+      "link": "https://play.google.com/store/apps/details?id=com.grantorg.freshmarket&hl=ru"
+    },
+    {
+      "id": "10",
+      "title": "Prometheus Mobile Monitor",
+      "description": "Prometheus'dan ma'lumot olish va ularni grafik ko'rinishida ko'rsatish uchun mobil ilova. Boshqa ilovalarda ishlatiladigan stack'ni yaxshiroq tushunish uchun Flutter texnologiyasi bilan tanishish maqsadida ishlab chiqilgan.",
+      "tags": ["Flutter", "Prometheus"],
+      "link": "https://github.com/Tmoiseenko/prometheus-mobile-monitor"
+    },
+    {
+      "id": "11",
+      "title": "Jambim: Afisha & Tanishuvlar",
+      "description": "Tadbirlarni topish va tanishuvlar uchun mobil ilova uchun GraphQL API ishlab chiqildi. Backend Laravel'da yozilgan.",
+      "tags": ["PHP", "OctoberCMS", "GraphQL"],
+      "github": "https://github.com/Tmoiseenko/timo-portfolio",
+      "link": "https://octobercms.com/plugin/timo-portfolio"
+    },
+    {
+      "id": "5",
+      "title": "BELUGA GROUP",
+      "description": "Qayta aloqa formalaridan kelgan ma'lumotlarni qayta ishlash uchun API ishlab chiqildi, 1C-Bitrix va bildirishnoma tizimlari bilan integratsiya qilindi.",
+      "tags": ["1C-Bitrix", "Symfony", "API"],
+      "link": "https://belugagroup.ru/"
+    },
+    {
+      "id": "12",
+      "title": "Resume / Portfolio",
+      "description": "OctoberCMS'da portfolio/rezyume yaratish uchun plagin. Ushbu plagin ta'lim, ish tajribasi, loyihalar, ko'nikmalar, texnologiyalar va foydalanuvchi ma'lumotlari kabi bo'limlarni yaratish imkonini beradi.",
+      "tags": ["PHP", "OctoberCMS", "Plugin"],
+      "link": "https://play.google.com/store/apps/details?id=com.jambim&hl=ru"
+    },
+    {
+      "id": "7",
+      "title": "Omsk viloyati MFC sayti",
+      "description": "Python + Django'dagi qo'lda yozilgan yechimdan 1C-Bitrix'ga migratsiya qilindi. Ikki kishilik jamoada full-stack ishlab chiqish. Tashqi API'lar bilan integratsiya.",
+      "tags": ["1C-Bitrix", "PHP"],
+      "link": "https://xn----ttbebjtrq.xn--p1ai/"
+    },
+    {
+      "id": "7",
+      "title": "Reval Stone online shop",
+      "description": "WordPress + WooCommerce asosida internet do'kon ishlab chiqildi. Tashqi API'lar bilan integratsiya uchun tema va pluginlar yaratildi. Murakkab mantiqqa ega tosh stoleshnitsa buyurtma kalkulyatori ishlab chiqildi. Yevropa bo'ylab yetkazib berish narxini barcha soliq va transport xarajatlarini hisobga olgan holda hisoblaydigan plagin yozildi.",
+      "tags": ["Wordpress", "WooCommerce", "PHP", "Jquery", "JS"],
+      "link": "https://revalstone.com/shop/en/"
+    },
+    {
       "id": "1",
       "title": "Aglona.ru",
-      "description": "WordPress + WooCommerce uchun maxsus tema ishlab chiqilgan. Omborlar bo'yicha mahsulot mavjudligini bog'lash, ombor kesimidagi qoldiqni ko'rsatish va sevimlilar tizimi amalga oshirilgan.",
+      "description": "WordPress + WooCommerce uchun tema ishlab chiqildi. Omborlar va mahsulot mavjudligini aniq omborlarga bog'lash amalga oshirildi. Sevimlilar funksiyasi mustaqil ishlab chiqildi.",
       "tags": ["WordPress", "PHP", "WooCommerce"],
       "link": "https://www.aglona.ru/",
       "github": "https://github.com/Tmoiseenko/Aglona_WP_Theme"
@@ -70,35 +127,28 @@
     {
       "id": "2",
       "title": "Kotly.uz",
-      "description": "Qozon-uskunalari ishlab chiqaruvchisi uchun katalog sayt. WordPress asosida ko'plab maxsus turlar va nostandart bloklarga ega tema ishlab chiqilgan.",
+      "description": "Qozon uskunalari ishlab chiqaruvchisi uchun sayt-katalog. Ko'plab maxsus turlar va nostandart bloklarga ega WordPress temasi ishlab chiqildi.",
       "tags": ["WordPress", "PHP", "Catalog"],
       "link": "https://kotly.uz/"
     },
     {
       "id": "3",
       "title": "asakabank.uz",
-      "description": "Saytning administrativ qismi ishlab chiqilgan: statik sahifalarni tahrirlash vositasi va bank API orqali onlayn to'lov integratsiyasi.",
+      "description": "Saytning administrativ qismi ishlab chiqildi. Statik sahifalarni tahrirlash vositasi va bank API orqali onlayn to'lov joriy qilindi.",
       "tags": ["Laravel", "PHP", "Banking API"],
       "link": "https://asakabank.uz/physical-persons/home"
     },
     {
       "id": "4",
-      "title": "Veb konferensiyalar platformasi",
-      "description": "Ro'yxatdan o'tish, live chat, translyatsiya, statistikalar va xabarnomalar bilan to'liq webinar platforma.",
+      "title": "Veb-konferensiyalar platformasi",
+      "description": "To'liq webinar platformasi: ro'yxatdan o'tish, onlayn chat, translyatsiya, statistika va xabar yuborish.",
       "tags": ["Laravel", "Vue 3", "WebSockets"],
       "github": "https://github.com/Tmoiseenko/webconf_platform"
     },
     {
-      "id": "5",
-      "title": "BELUGA GROUP",
-      "description": "Aloqa formalaridan kelgan ma'lumotlarni qayta ishlash uchun API, 1C-Bitrix va bildirishnoma tizimlari bilan integratsiya.",
-      "tags": ["1C-Bitrix", "Symfony", "API"],
-      "link": "https://belugagroup.ru/"
-    },
-    {
       "id": "6",
       "title": "Laravel do'koni",
-      "description": "Ko'p sotuvchili marketplace, moslashuvchan chegirma tizimi va JSON/YML import oqimlariga ega loyiha.",
+      "description": "Turli sotuvchilarni qo'llab-quvvatlaydigan marketplace, moslashuvchan chegirma tizimi va JSON/YML'dan ma'lumot importi.",
       "tags": ["Laravel", "PHP", "Docker"],
       "github": "https://github.com/Tmoiseenko/Laravel_shop"
     }
